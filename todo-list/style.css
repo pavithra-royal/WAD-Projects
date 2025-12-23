@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* App Card */
+.app-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+#addTaskBtn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#addTaskBtn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 4px;
+  border-radius: 20px;
+  border: none;
+  padding: 8px;
+  background: #eaeaea;
+  transition: 0.3s;
+}
+
+.filters button.active {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  font-weight: bold;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #f7f7ff;
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* Completed Task */
+li.completed {
+  background: #e0ffe8;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #6aaa6a;
+}
+
+/* Task Text */
+li span {
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Action Buttons */
+.task-actions button {
+  margin-left: 5px;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-actions button:first-child {
+  background: #ffd166;
+}
+
+.task-actions button:last-child {
+  background: #ef476f;
+  color: white;
+}
+
+.task-actions button:hover {
+  opacity: 0.85;
+}
+
+/* Counter */
+#taskCounter {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Clear Completed */
+#clearCompletedBtn {
+  width: 100%;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#clearCompletedBtn:hover {
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Friendly */
+@media (max-width: 480px) {
+  .input-section {
+    flex-direction: column;
+  }
+}
